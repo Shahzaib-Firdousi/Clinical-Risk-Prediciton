@@ -2,8 +2,11 @@
 .venv/
 venv/
 
-# Data
+# Data (ignore everything by default)
 data/
+# but allow the small demo file needed for Streamlit deployment
+!data/processed/
+!data/processed/demo_patients.csv
 
 # Python cache
 __pycache__/
@@ -19,5 +22,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Model artifacts
+# Model artifacts (ignore everything by default)
 models/
+# but allow the trained model needed for Streamlit deployment
+!models/xgb_pipeline.joblib
